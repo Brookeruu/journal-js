@@ -10,5 +10,7 @@ $(document).ready(function() {
     $("#word-count").text(newEntry.wordCount());
     $("#vowel-count").text(newEntry.vowelCount());
     $("#consonant-count").text(newEntry.consonantCount());
+    $("#teaser-title").text(newEntry.getTitle());
+    $("#teaser-body").text(newEntry.getTeaser());
   });
 });

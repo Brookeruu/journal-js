@@ -1,18 +1,4 @@
-// export function pingPong(goal) {
-//   var output = [];
-//   for (var i = 1; i <= goal; i++) {
-//     if (i % 15 === 0) {
-//       output.push("ping-pong");
-//     } else if (i % 3 === 0) {
-//       output.push("ping");
-//     } else if (i % 5 === 0) {
-//       output.push("pong");
-//     } else  {
-//       output.push(i);
-//     }
-//   }
-//   return output;
-// }
+
 export function Entry(title, body) {
   this.title = title;
   this.body = body;
@@ -43,6 +29,17 @@ Entry.prototype.getTitle = function() {
 };
 
 Entry.prototype.getTeaser = function() {
-  var body = this.body;
+  var teaser = [];
+  var body = this.body.split(".");
+  var firstSentence = body[0];
+  var wordCount = firstSentence.split(" ");
+  var count = 0;
 
+  wordCount.forEach(function(each) {
+    if (count < 8) {
+      teaser.push(each);
+      count = count + 1;
+    }
+  });
+  return teaser.join(" ").concat("...");
 };

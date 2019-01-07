@@ -7,6 +7,21 @@
   </head>
   <body>
     <h1>This will be a journal page</h1>
-
+    <form id="entry-form">
+      <div class="form-group">
+        <label for="title">Title: </label>
+        <input id="title" type="text" name="title" required>
+        <label for="body">Body: </label>
+        <input id="body" type="text" name="body" required>
+        <button type="submit" name="button">Submit</button>
+      </div>
+    </form>
+    <div class="count">
+      <ul>
+        <li>Word Count: <span id="word-count"></span></li>
+        <li>Vowel Count: <span id="vowel-count"></span></li>
+        <li>Consonant Count: <span id="consonant-count"></span></li>
+      </ul>
+    </div>
   </body>
 </html>
